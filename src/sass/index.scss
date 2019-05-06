@@ -1,22 +1,254 @@
-@import 'public';
+@import '_public';
+.iconfont {
+    font-size: 22px;
+    margin: 0 21px;
+}
 header{
-    width: 1200px;
-    height: 130px;
-    font-size: 14px;
-    .header-left{
-        float: left;
-        margin-top: 62px;
-        vertical-align: middle;
-        .header-lang{
-            width: 40px;
-            padding-left: 25px;
-            h4{
-                font-size: 12px;
+    width:100%;
+    .sheader{
+        width: 1200px;
+        height: 130px;
+        font-size: 14px;
+        .header-left{
+            float: left;
+            margin-top: 62px;
+            vertical-align: middle;
+            .header-lang{
+                width: 40px;
+                padding-left: 25px;
+                position: relative;
+                float: left;
+                height: 28px;
+                padding-right: 20px;
+                padding-bottom: 3px;
                 line-height: 28px;
-                margin: 0;
-                padding-right: 4px;
-                text-align: center;
+                h4{
+                    font-weight: normal;
+                    font-size: 12px;
+                    line-height: 28px;
+                    padding-right: 4px;
+                    text-align: center;
+                    float:left;
+                }
             }
+            .line{
+                float: left;
+                width: 1px;
+                height: 28px;
+                background-color: #ccc;
+            }
+            .header-rmb{
+                width: 49px;
+                padding-left: 17px;
+                position: relative;
+                float: left;
+                height: 28px;
+                padding-right: 20px;
+                padding-bottom: 3px;
+                line-height: 28px;
+                h4{
+                    font-weight: normal;
+                    font-size: 12px;
+                    line-height: 28px;
+                    margin: 0;
+                    padding-right: 4px;
+                    text-align: center;
+                }
+            }
+        }
+        .header-logo{
+            width: 189px;
+            height: 75px;
+            margin: 0 auto;
+            padding-top: 29px;
+        }
+        .header-right{
+            float: right;
+            margin-top: 62px;
+            a{
+                color: #000;
+                display: inline-block;
+                vertical-align: middle;
+                font-size: 12px;
+            }
+            span{
+                float: left;
+                height: 28px;
+                font-size: 0;
+                line-height: 28px;
+            }
+            .register{
+                margin-right: 17px;
+            }
+            .line{
+                float: left;
+                width: 1px;
+                height: 28px;
+                background-color: #ccc;
+            }
+            .sign-in{
+                a{
+                    width: 63px;
+                    text-align: center;
+                }
+            }
+        }
+    }
+}
+nav{
+    width:100%;
+    background: #000;
+    height: 50px;
+    .snav{
+        width: 1200px;
+        margin: 0 auto;
+        .nav-menu{
+            float:left;
+            .nav-item{
+                float:left;
+                a{
+                    position: relative;
+                    display: block;
+                    height: 50px;
+                    padding: 0 25px;
+                    line-height: 50px;
+                    color: #ffb81c;
+                    cursor: pointer;
+                    font-size: 14px;
+                }
+                /* 隐藏的菜单 */
+                .nav-unfold{
+                    position: absolute;
+                    left: 0;
+                    top: 100%;
+                    width: 100%;
+                    background-color: #FFF;
+                    display: none;
+                    z-index: 15;
+                    .unfold-list li{
+                        float:left;
+                        width:400px;
+                        h4{
+                            margin-bottom:25px;
+                            font-size:14px;
+                            font-weight:700;
+                        }
+                        a{
+                            float: left;
+                            width: 200px;
+                            height: 40px;
+                            font-size: 13px;
+                            color: #666666;
+                        }
+                    }
+
+                }
+            }
+        }
+        .nav-search{
+            float: right;
+            height: 50px;
+            line-height: 50px;
+            color: #ffb81c;
+            cursor: pointer;
+            .search-inner{
+                position: relative;
+                width: 55px;
+                height: 20px;
+                padding-bottom: 7px;
+                margin-top: 15px;
+                transition: width linear 0.3s, border-color linear 0.3s;
+                border-bottom: 1px solid transparent;
+                padding-right: 30px;
+                input{
+                    display: block;
+                    width: 100%;
+                    height: 100%;
+                    font-size: 14px;
+                    background-color: transparent;
+                    color: #ffb81c;
+                    caret-color: #ffb81c;
+                    border: 0 none;
+                    cursor: pointer;
+                }
+                .icon-search{
+                    position: absolute;
+                    right: 0;
+                    top: 2px;
+                    width: 20px;
+                    height: 19px;
+                    line-height: 19px;
+                    transition: color linear 0.3s;
+                    color: #ffb81c;
+                }
+            }
+        }
+    }
+}
+.banner-container{
+    width:1200px;
+    margin:0 auto;
+    margin-top:20px;
+    .secoo-trend{
+        position: relative;
+        float: left;
+        width: 530px;
+        height: 900px;
+        .top-img, .bottom-img{
+            position: absolute;
+            left: 0;
+            width: 100%;
+        }
+        .top-img{
+            height:790px;
+            top:0;
+            z-index:1;
+            img{
+                width:100%;
+            }
+        }
+        .bottom-img{
+            bottom:0;
+            z-index:2;
+            img{
+                width:100%;
+            }
+        }
+    }
+    .international-brands{
+        position: relative;
+        float: right;
+        width: 650px;
+        height: 410px;
+        .left-img{
+            left:0;
+            z-index:2;
+        }
+        .right-img{
+            right:0;
+            z-index:1;
+        }
+        .left-img, .right-img {
+            position: absolute;
+            top: 0;
+            height: 100%;
+        }
+    }
+    .banner-video{
+        position: relative;
+        float: right;
+        width: 650px;
+        height: 550px;
+        margin-top: 20px;
+        cursor: pointer;
+        background: #000;
+        .bg-poster{
+            position: absolute;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            z-index: 2;
         }
     }
 }
